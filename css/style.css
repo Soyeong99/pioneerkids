@@ -234,10 +234,11 @@
   width: 100%; display: flex; gap: 8px; flex-wrap: wrap;
 }
 .content_list li {
-  width: calc((60% - 24px) / 3); min-height: 230PX; padding: 50px 0 30px; transition: all 0.5s; background: #eee; border-radius: 10px;
+  width: calc((60% - 24px) / 3); height: 220px;  padding: 50px 0 30px; transition: all 0.5s; background: #eee; border-radius: 10px; cursor: default;
 }
-.content_list li.active{
-  width: 40%; background-image: none;
+.content_list li.active,
+.content_list li:hover{
+  width: 40%; background-image: none; height: 220px; 
 }
 .card_title {
   text-align: center; height: 50%;
@@ -282,6 +283,11 @@
     font-size: 1.6rem;
   }
 }
+@media(max-width:680px){
+  .card_title p br {
+    display: none;
+  }
+}
 @media(max-width:540px){
   .content_list li.active,
   .content_list li{
@@ -291,9 +297,6 @@
 @media(max-width:430px){
   .card_title p {
     font-size: 1.4rem; opacity: 1;
-    br {
-      display: none;
-    }
   }
 }
 
@@ -313,7 +316,7 @@
   padding-bottom: 30px;
 }
 .class_quick_list { 
-  display: flex; width: 100%; justify-content:flex-start; gap: 12px; flex-wrap: wrap; 
+  display: flex; width: 100%; justify-content: space-around; flex-wrap: wrap; 
 }
 .class_quick_list > li{
   display: flex; justify-content: center; 
@@ -451,7 +454,7 @@
 }
 /* review */
 section#review {
-  height: 970px; padding: 320px 0 50px; 
+  height: 860px; padding: 320px 0 50px; 
   position: relative;
 }
 #review .sec_title{
@@ -464,7 +467,7 @@ section#review {
   padding-top: 20px; overflow-x: hidden;
 }
 .review_area > div {
-  margin-bottom: 12px;
+  margin-bottom: 3px;
 }
 .review_area > div.btm_slide > div{
   margin-left: 37%;
@@ -500,12 +503,12 @@ section#review {
 }
 @media(max-width:1200px){
   section#review {
-    height: 930px; padding: 280px 0 50px; 
+    height: 800px; padding: 280px 0 50px; 
   }
 }
 @media(max-width:980px){
   section#review {
-    height: 690px; padding: 200px 0 30px; 
+    height: 630px; padding: 200px 0 30px; 
   }
   .nicknmae{
     font-size: 1.6rem;
@@ -529,8 +532,12 @@ section#review {
   }
   .review_txt_data p{
   font-size: 1.6rem;
+  }
 }
-
+@media(max-width:600px){
+  section#review {
+    height: 550px;
+  }
 }
 /* special_keyword */
 #special_keyword .sec_title {
@@ -576,7 +583,7 @@ section#review {
   margin-bottom: 50px;
 }
 .vedio {
-  aspect-ratio: 16/9; max-width: 100%; width: 100%; background: #eee; border-radius: 20px; margin: 0 auto;
+  aspect-ratio: 16/9; max-width: 100%; width: 100%; background: #eee; border-radius: 10px; margin: 0 auto;
 }
 
 @media (max-width:1200px) {
@@ -668,9 +675,9 @@ section#review {
     left: -50px; 
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 455px) {
   .right_box .list_item::after, .left_box .list_item::after {
-    left: -37px;
+    left: -35px;
   }
   .list_items{
     padding-left: 30px;
@@ -689,7 +696,7 @@ section#review {
 }
 /* teacher */
 #teacher{
-  position: relative;
+  position: relative; margin-top: 120px;
 }
 #teacher .inner {
   overflow: hidden; 
@@ -719,29 +726,6 @@ section#review {
   background: #fff; color: var(--txt-black);
 }
 
-@media (max-width:1060px) {
-  .btm_info_box{
-    align-items: flex-start; flex-direction: column;
-  }
-  .info_txt{
-    padding-left: 3px; line-height: 1.2;
-  }
-}
-@media (max-width:768px) {
-  .btm_info_box{
-    padding: 10px;
-  }
-  .info_txt .name{
-    font-size: 2.4rem; 
-  }
-  .info_txt .teaching {
-    font-size: 1.6rem;
-  }
-  .go_link a {
-    padding: 3px 20px;
-  }
-}
-
 @media (min-width: 1180px) {
   .teacher_info_con ul {
     display: flex; 
@@ -759,7 +743,14 @@ section#review {
     background: url(../img/common/profile_teacher_01.jpg) no-repeat center / cover;
   }
 }
-
+@media (max-width:1060px) {
+  .btm_info_box{
+    align-items: flex-start; flex-direction: column;
+  }
+  .info_txt{
+    padding-left: 3px; line-height: 1.2;
+  }
+}
 @media (max-width: 1000px) {
   .teacher_info_con {
     overflow: hidden;
@@ -771,13 +762,30 @@ section#review {
   }
   
   .teacher_info_con .swiper-slide {
+    aspect-ratio: 5/7;background: #eee; border-radius: 10px; background: url(../img/common/profile_teacher_01.jpg) no-repeat center / cover; height: auto; flex-shrink: 0;
     position: relative; 
-    aspect-ratio: 5/7;
-    background: #eee; 
-    border-radius: 20px;
-    background: url(../img/common/profile_teacher_01.jpg) no-repeat center / cover;
-    height: auto;
-    flex-shrink: 0;
+  }
+}
+@media (max-width:768px) {
+  #teacher{
+    margin-top: 80px;
+  }
+  .btm_info_box{
+    padding: 10px;
+  }
+  .info_txt .name{
+    font-size: 2.4rem; 
+  }
+  .info_txt .teaching {
+    font-size: 1.6rem;
+  }
+  .go_link a {
+    padding: 3px 20px;
+  }
+}
+@media (max-width:388px) {
+  #teacher{
+    margin-top: 60px;
   }
 }
 

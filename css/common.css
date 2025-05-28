@@ -40,21 +40,6 @@ section {
     padding: 80px 0;
   }
 }
-@media(max-width:980px){
-  section { 
-    padding: 70px 0;
-  }
-}
-@media(max-width:680px){
-  section { 
-    padding: 50px 0;
-  }
-}
-@media(max-width:390px){
-  section { 
-    padding: 60px 0;
-  }
-}
 
 /* header */
 header > .inner, .gnb, .header_right, .util_area{ 
@@ -130,7 +115,7 @@ header {
 .m_gnb_wrap{
   width: 100%; height: 100vh; overflow-x: hidden; overflow-y: hidden; 
   background: var(--bg-body-ivory); z-index: 999; padding: 80px 20%;
-  position: absolute; top: 0; left: 0; display: none;
+  position: fixed; top: 0; left: 0; display: none;
 }
 .m_gnb {
   padding-top: 50px;
@@ -165,21 +150,32 @@ span.mgnb_close:hover {
     width: 30px;
   }
 }
+@media(max-width:480px){
+  .m_gnb_wrap{
+    padding: 80px 10%;
+  }
+}
 @media(max-width:430px){
   .m_menu_logo {
     width: 280px;
   }
   .m_util {
-    margin-top: 30px; padding: 0;
+    padding: 0;
   }
 }
-@media(max-width:360px){
+@media(max-width:380px){
+  .m_gnb_wrap {
+    padding: 60px 10%;
+  }
   .m_menu_logo {
     width: 200px;
   }
   .m_gnb > li > a,
    ol.m_util > li > a{
-    font-size: 2rem;
+    font-size: 1.8rem; padding: 12px;
+  }
+  span.mgnb_close P {
+    font-size: 4rem;
   }
 }
 
@@ -244,7 +240,7 @@ span.mgnb_close:hover {
       font-size: 2.8rem;
     }
     h3+p.muted{
-      padding: 0;
+      padding: 0; margin-left: 2px; font-size: 1.2rem;
     }
   }
 }

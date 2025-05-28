@@ -18,6 +18,27 @@ $(function () {
     }
   });
 
+  
+  // edu_pr content
+  $(document).ready(function () {
+    const $items = $(".content_list li");
+
+    // 초기 첫 번째 요소에 active 추가
+    $items.eq(0).addClass("active").css("background-image", "none");
+
+    // hover 시 active 처리
+    $items.on("mouseenter", function () {
+      $items.removeClass("active").css("background-image", "");
+      $(this).addClass("active").css("background-image", "none");
+    });
+
+    // 클릭 시 active 처리 (hover와 동일한 동작)
+    $items.on("click", function () {
+      $items.removeClass("active").css("background-image", "");
+      $(this).addClass("active").css("background-image", "none");
+    });
+  });
+
 
   //review_area
   const top_slide = new Swiper(".top_slide", {
