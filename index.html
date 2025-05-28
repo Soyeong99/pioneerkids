@@ -1890,6 +1890,83 @@
               swiperInstance = new Swiper('.teacher_info_con', {
                 loop: true,
                 speed: 1000,
+                spaceBetween: 12,
+                centeredSlides: false,
+
+                autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+                },
+
+                // 반응형 설정
+                breakpoints: {
+                  0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                    centeredSlides: true
+                  },
+                  381: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 12,
+                    centeredSlides: true
+                  },
+                  581: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 12,
+                    centeredSlides: false
+                  },
+                  681: {
+                    slidesPerView: 3,
+                    spaceBetween: 12,
+                    centeredSlides: false
+                  }
+                }
+              });
+              console.log('Swiper 활성화됨');
+            }
+          } else {
+            // 1080px 초과시 Swiper 제거
+            if (swiperInstance) {
+              swiperInstance.destroy(true, true);
+              swiperInstance = null;
+              console.log('Swiper 비활성화됨');
+            }
+          }
+        }
+
+        // 초기 실행
+        initOrDestroySwiper();
+
+        // 리사이즈 이벤트 (debounce 적용)
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            console.log('리사이즈 감지 - 현재 너비:', window.innerWidth);
+            initOrDestroySwiper();
+          }, 250);
+        });
+      }
+    });
+  </script>
+
+  <!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const teacherInfoCon = document.querySelector('.teacher_info_con');
+
+      if (teacherInfoCon) {
+        let swiperInstance = null;
+
+        function initOrDestroySwiper() {
+          const windowWidth = window.innerWidth;
+
+          // 1080px 이하에서만 Swiper 활성화
+          if (windowWidth <= 1080) {
+            // 기존 인스턴스가 없을 때만 새로 생성
+            if (!swiperInstance) {
+              swiperInstance = new Swiper('.teacher_info_con', {
+                loop: true,
+                speed: 1000,
                 spaceBetween: 8,
                 centeredSlides: false,
 
@@ -1940,7 +2017,7 @@
         });
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
