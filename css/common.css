@@ -30,7 +30,7 @@ a {
 
 /* layout */
 .inner { 
-  max-width: 1480px; padding: 0 2%; margin: 0 auto;
+  max-width: 1400px; padding: 0 5%; margin: 0 auto;
 }
 section { 
   padding: 100px 0;
@@ -65,19 +65,19 @@ header {
   nav{
     display: flex; align-items: center; justify-content: center;
     .gnb > li a {
-      padding: 8px 26px; font-size: 2.2rem;
+      padding: 8px 16px; font-size: 1.8rem;
     }
   }
   /* util & search_area */
   .search {
-    width: 280px; display: flex; justify-content: space-between; padding: 10px 20px; border-radius: 100px; background-color: var(--gray-box); 
+    width: 280px; display: flex; justify-content: space-between; padding: 8px 20px; border-radius: 100px; background-color: var(--gray-box); 
     border: 1px solid var(--gray-box); margin-right: 12px; transition: all 0.5s;
     
     input{
-      font-family: var(--font-nonmal); font-size: 1.8rem; width: 97%;
+      font-family: var(--font-nonmal); font-size: 1.6rem; width: 97%;
     }
     input::placeholder {
-      font-family: var(--font-nonmal); font-size: 1.8rem; color: rgba(23, 51, 32, 0.6);
+      font-family: var(--font-nonmal); font-size: 1.6rem; color: rgba(23, 51, 32, 0.6);
     }
   }
   .search:hover {
@@ -270,19 +270,19 @@ span.mgnb_close:hover {
 .class_card_list {
   display: flex; gap: 8px;
   .card_item { 
-  width: calc((100% - 36px )/ 4); border-radius: 20px; overflow: hidden; box-shadow: var(--box-shadow);
-  position: relative;
+    width: calc((100% - 36px )/ 4); border-radius: 20px; overflow: hidden; box-shadow: var(--box-shadow);
+    position: relative;
   }
 
   .class_img {
-  height: 264px; background: #eee;
+    height: 264px; background: #eee;
   }
 
   .class_card_txt {
     padding: 14px 12px 16px; background: #fff;
 
     .tag_list{
-    display: flex; gap: 3px; margin-bottom: 8px;
+      display: flex; gap: 3px; margin-bottom: 8px;
 
       .tag {
         padding: 1px 12px; border-radius: 100px; font-size: 1.4rem;

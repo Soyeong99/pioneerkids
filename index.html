@@ -20,9 +20,10 @@
 
   <!-- js -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script defer src="js/swiper-bundle.min.js"></script>
   <script defer src="js/jquery-3.7.1.min.js"></script>
-  <script defer src="js/common.js"></script>
+
   <script defer src="js/main.js"></script>
 </head>
 
@@ -121,54 +122,38 @@
     <!-- main -->
     <main id="main">
 
-      <section id="hero">
+      <!-- hero -->
+      <section class="hero" id="hero">
         <div class="hero_content">
-          <div class="hero_txt_area">
-            <div class="hero_title">
-              <h2>국제형 영어 교육 플랫폼</h2>
-              <p>피오니키즈</p>
-            </div>
+          <div class="hero_center_group">
 
-            <div class="main_call_to_action">
+            <div class="hero_text_group">
+              <h2 class="ko_title">국제형 영어 교육 플랫폼</h2>
+              <p class="ko_sub">피오니키즈</p>
+              <h2 class="en_sub">Plant your thoughts,<br>Grow your dreams</h2>
+            </div>
+            <div class="tree_wrapper">
+              <img src="./img/main/img_tree.png" alt="나무 이미지" class="tree" />
+            </div>
+            <div class="cta_button">
               <button type="button">수업 신청하기</button>
             </div>
           </div>
 
-          <div class="new_text_area">
-            <h2>Plant your thoughts, <br> Grow your dreams</h2>
-          </div>
-
-          <div class="center_tree">
-            <img src="img/main/img_tree.png" alt="나무 이미지">
-          </div>
-
           <div class="floating_img_box">
-            <div class="floating_img">
-              <img src="img/main/hero_img_expression.png" alt="피오니키즈 키워드, 표현력">
-            </div>
-            <div class="floating_img">
-              <img src="img/main/hero_img_thinking.png" alt="피오니키즈 키워드, 사고력">
-            </div>
-            <div class="floating_img">
-              <img src="img/main/hero_img_logic.png" alt="피오니키즈 키워드, 논리력">
-            </div>
-            <div class="floating_img">
-              <img src="img/main/hero_img_flexibillty.png" alt="피오니키즈 키워드, 유연성">
-            </div>
-            <div class="floating_img">
-              <img src="img/main/hero_img_creativity.png" alt="피오니키즈 키워드, 창의성">
-            </div>
-            <div class="floating_img">
-              <img src="img/main/hero_img_analysis.png" alt="피오니키즈 키워드, 분석력">
-            </div>
-            <div class="floating_img">
-              <img src="img/main/hero_img_challenge.png" alt="피오니키즈 키워드, 도전성">
-            </div>
+            <div class="floating_img floating_img_1"><img src="./img/main/hero_img_expression.png" alt="표현력" /></div>
+            <div class="floating_img floating_img_2"><img src="./img/main/hero_img_thinking.png" alt="사고력" /></div>
+            <div class="floating_img floating_img_3"><img src="./img/main/hero_img_logic.png" alt="논리력" /></div>
+            <div class="floating_img floating_img_4"><img src="./img/main/hero_img_creativity.png" alt="창의성" /></div>
+            <div class="floating_img floating_img_5"><img src="./img/main/hero_img_analysis.png" alt="분석력" /></div>
+            <div class="floating_img floating_img_6"><img src="./img/main/hero_img_challenge.png" alt="도전성" /></div>
+            <div class="floating_img floating_img_7"><img src="./img/main/hero_img_flexibillty.png" alt="유연성" /></div>
           </div>
         </div>
       </section>
 
-      <section id="edu_pr" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200">
+      <!-- edu_pr -->
+      <section id="edu_pr" class="next_section" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200">
         <div class="inner">
           <div class="sec_title">
             <h3>우리 집에서 만나는 미국 학교</h3>
@@ -221,7 +206,7 @@
       </div>
 
       <!-- curriculum -->
-      <section id="curriculum" data-aos="zoom-out" data-aos-duration="500">
+      <div id="curriculum" data-aos="zoom-out" data-aos-duration="500">
         <div class="inner">
           <div class="sec_title">
             <h3>피오니키즈 커리큘럼</h3>
@@ -319,7 +304,7 @@
             </li>
           </ol>
         </div>
-      </section>
+      </div>
 
       <!-- pione_class / 피오니키즈 수업 리스트들 -->
       <!-- 슬라이드 되지 않습니다. 4개씩 노출 -->
@@ -1354,7 +1339,6 @@
 
           <div class="sec_title">
             <h3>피오니키즈만의 특별함</h3>
-            <!-- <P class="muted">왜 피오니키즈여야 할까요?</P> -->
           </div>
 
           <div class="keyword_list">
@@ -1362,25 +1346,24 @@
             <div class="list_items">
 
               <div class="left_box">
-                <div class="list_item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="list_item" data-aos="fade-right" data-aos-offset="530" data-aos-delay="220">
                   <h5>창의적 활동 중심의 참여 수업</h5>
                   <P class="desc">학생이 리드하는 수업으로 리더십 증진</P>
                 </div>
 
-                <div class="list_item" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="list_item" data-aos="fade-right" data-aos-offset="750">
                   <h5>전문 분야 전공 선생님</h5>
                   <P class="desc">북미 거주 7년 이상, 각 분야 전공자로 이루어진 강사진</P>
                 </div>
               </div>
 
-              <div class="right_box" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <div class="right_box" data-aos="fade-left" data-aos-offset="400" data-aos-delay="200">
                 <div class="list_item">
-
                   <h5>다양한 주제별 영어 수업</h5>
                   <P class="desc">영어 습득과 함께 다양한 지식 확장까지</P>
                 </div>
 
-                <div class="list_item" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div class="list_item" data-aos="fade-left" data-aos-offset="660" data-aos-delay="200">
                   <h5>학생의 성장 관리</h5>
                   <P class="desc">정기적 학습 성장 데이터 제공으로 맞춤형 수업 제공</P>
                 </div>
@@ -1580,410 +1563,119 @@
   </script>
 
   <!-- hero section ani -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
   <script>
-    // 모바일 브레이크포인트 설정
-    const MOBILE_BREAKPOINT = 980;
+    gsap.registerPlugin(ScrollTrigger);
 
-    class ScrollImageController {
-      constructor() {
-        this.images = document.querySelectorAll('.floating_img');
-        this.tree = document.querySelector('.center_tree');
-        this.heroSection = document.querySelector('#hero');
-        this.heroText = document.querySelector('.hero_txt_area');
-        this.newText = document.querySelector('.new_text_area');
-        this.floatingBox = document.querySelector('.floating_img_box');
+    const heroContent = document.querySelector(".hero_content");
+    const nextSection = document.querySelector(".next_section");
 
-        if (!this.images.length || !this.tree || !this.heroSection || !this.heroText || !this.newText) {
-          console.error('필요한 요소를 찾을 수 없습니다.');
-          return;
-        }
-
-        this.imageData = [];
-        this.maxActiveHeight = this.heroSection.offsetHeight - window.innerHeight;
-        this.init();
-      }
-
-      init() {
-        setTimeout(() => {
-          this.calculateInitialPositions();
-          this.bindEvents();
-          this.update();
-        }, 100);
-      }
-
-      calculateInitialPositions() {
-        this.imageData = [];
-        this.images.forEach((img) => {
-          const rect = img.getBoundingClientRect();
-          this.imageData.push({
-            element: img,
-            startX: rect.left + rect.width / 2 + window.scrollX,
-            startY: rect.top + rect.height / 2 + window.scrollY
-          });
-        });
-      }
-
-      bindEvents() {
-        let ticking = false;
-        window.addEventListener('scroll', () => {
-          if (!ticking) {
-            requestAnimationFrame(() => {
-              this.update();
-              ticking = false;
-            });
-            ticking = true;
+    ScrollTrigger.create({
+      trigger: ".hero",
+      start: "top top",
+      end: "+=200%",
+      pin: ".hero_content",
+      scrub: true,
+      anticipatePin: 1,
+      onLeave: () => {
+        gsap.to(heroContent, {
+          opacity: 0,
+          y: "-20%",
+          duration: 0.6,
+          ease: "power2.out",
+          onComplete: () => {
+            heroContent.style.pointerEvents = "none";
           }
         });
 
-        window.addEventListener('resize', () => {
-          this.calculateInitialPositions();
-          this.maxActiveHeight = this.heroSection.offsetHeight - window.innerHeight;
-        });
-      }
-
-      update() {
-        const scrollY = window.scrollY;
-        const rawProgress = Math.min(Math.max(scrollY / this.maxActiveHeight, 0), 1);
-        const scrollProgress = rawProgress * 0.25;
-
-        if (scrollY > this.maxActiveHeight + 50) {
-          this.floatingBox.style.opacity = "0";
-          this.tree.style.opacity = "0";
-          this.heroText.style.opacity = "0";
-          this.newText.style.opacity = "0";
-          return;
-        } else {
-          this.floatingBox.style.opacity = "1";
-          this.tree.style.opacity = "1";
-          this.heroText.style.opacity = "1";
-        }
-
-        const treeRect = this.tree.getBoundingClientRect();
-        const treeCenterX = treeRect.left + treeRect.width / 2;
-        const treeCenterY = treeRect.top + treeRect.height / 2;
-
-        let totalDistance = 0;
-
-        this.imageData.forEach((data) => {
-          const deltaX = treeCenterX - (data.startX - window.scrollX);
-          const deltaY = treeCenterY - (data.startY - window.scrollY);
-          const distance = Math.sqrt(deltaX ** 2 + deltaY ** 2);
-          totalDistance += distance;
-
-          const easeProgress = this.easeInOutQuad(scrollProgress);
-          const currentX = deltaX * easeProgress;
-          const currentY = deltaY * easeProgress;
-          const rotation = scrollProgress * 200;
-          const opacity = 1 - scrollProgress * 0.3;
-          const scale = 1 - scrollProgress * 0.3;
-
-          data.element.style.transform = `
-        translate(${currentX}px, ${currentY}px)
-        rotate(${rotation}deg)
-        scale(${Math.max(scale, 0.4)})
-      `;
-          data.element.style.opacity = Math.max(opacity, 0.4);
-        });
-
-        const averageDistance = totalDistance / this.imageData.length;
-        const maxDistance = window.innerWidth * 0.8;
-        const distanceRatio = 1 - Math.min(averageDistance / maxDistance, 1);
-        const treeScale = 0.5 + distanceRatio * 1.2;
-
-        this.tree.style.transform = `translateX(-50%) scale(${treeScale})`;
-
-        const textScale = 1 - (scrollProgress * 0.2);
-        const textOpacity = 1 - (scrollProgress * 0.3);
-        this.heroText.style.transform = `translate(-50%, -50%) scale(${Math.max(textScale, 0.6)})`;
-        this.heroText.style.opacity = Math.max(textOpacity, 0.6);
-
-        const newTextStart = 0.6;
-        const newTextEnd = 0.85;
-        const newTextProgress = Math.max((rawProgress - newTextStart) / (newTextEnd - newTextStart), 0);
-        const newTextOpacity = Math.min(newTextProgress, 1);
-        const newTextScale = 0.3 + (newTextProgress * 0.7);
-
-        this.newText.style.opacity = newTextOpacity;
-        this.newText.style.transform = `translate(-50%, -50%) scale(${newTextScale})`;
-      }
-
-      easeInOutQuad(t) {
-        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-      }
-    }
-
-    // 모바일 스크롤 기능 클래스
-    class MobileScrollController {
-      constructor() {
-        this.cardLists = document.querySelectorAll('.class_card_list');
-        this.init();
-      }
-
-      init() {
-        this.addScrollbarStyle();
-        this.applyMobileScroll();
-        this.bindEvents();
-      }
-
-      bindEvents() {
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(() => {
-            this.applyMobileScroll();
-          }, 150);
-        });
-      }
-
-      applyMobileScroll() {
-        const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
-
-        this.cardLists.forEach(list => {
-          if (isMobile) {
-            // 모바일: 좌우 스크롤 스타일 적용
-            this.setMobileStyles(list);
-          } else {
-            // 데스크톱: 기본 스타일로 복원
-            this.setDesktopStyles(list);
+        nextSection.classList.add("active");
+      },
+      onEnterBack: () => {
+        gsap.to(heroContent, {
+          opacity: 1,
+          y: "0%",
+          duration: 0.6,
+          ease: "power2.out",
+          onComplete: () => {
+            heroContent.style.pointerEvents = "auto";
+            nextSection.classList.remove("active");
           }
         });
       }
+    });
 
-      setMobileStyles(list) {
-        // 리스트 컨테이너 스타일 - 더 강력한 스타일링 적용
-        Object.assign(list.style, {
-          display: 'flex',
-          flexDirection: 'row',
-          flexWrap: 'nowrap',
-          overflowX: 'auto',
-          overflowY: 'hidden',
-          gap: '6px',
-          paddingBottom: '15px',
-          scrollBehavior: 'smooth',
-          WebkitOverflowScrolling: 'touch',
-          whiteSpace: 'nowrap'
-        });
+    const icons = document.querySelectorAll(".floating_img");
 
-        // CSS로도 추가 보장
-        list.style.cssText += `
-      display: flex !important;
-      flex-direction: row !important;
-      flex-wrap: nowrap !important;
-      overflow-x: auto !important;
-      overflow-y: hidden !important;
-      white-space: nowrap !important;
-    `;
+    icons.forEach(icon => {
+      const rect = icon.getBoundingClientRect();
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+      const iconCenterX = rect.left + rect.width / 2;
+      const iconCenterY = rect.top + rect.height / 2;
+      const deltaX = centerX - iconCenterX;
+      const deltaY = centerY - iconCenterY;
 
-        // 각 카드 아이템 스타일 설정 - 더 확실하게 고정
-        const cardItems = list.querySelectorAll('.card_item');
-        cardItems.forEach((item, index) => {
-          Object.assign(item.style, {
-            flexShrink: '0',
-            flexGrow: '0',
-            flexBasis: 'auto',
-            minWidth: '280px',
-            width: '280px',
-            maxWidth: '280px',
-            display: 'inline-block',
-            verticalAlign: 'top',
-            whiteSpace: 'normal'
-          });
+      gsap.to(icon, {
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "+=200%",
+          scrub: true,
+        },
+        x: deltaX,
+        y: deltaY,
+        opacity: 0
+      });
+    });
 
-          // CSS로도 추가 보장
-          item.style.cssText += `
-        flex: 0 0 280px !important;
-        min-width: 280px !important;
-        width: 280px !important;
-        max-width: 280px !important;
-        display: inline-block !important;
-        vertical-align: top !important;
-      `;
-        });
+    gsap.to(".ko_title", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "center top",
+        scrub: true,
+      },
+      opacity: 0
+    });
 
-        // 컨테이너에 overflow: visible 적용하여 카드가 밖으로 보이도록
-        const container = list.closest('.inner') || list.parentElement;
-        if (container) {
-          container.style.overflow = 'visible';
-          container.style.width = '100%';
-        }
-      }
+    gsap.to(".ko_sub", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "center top",
+        scrub: true,
+      },
+      opacity: 0
+    });
 
-      setDesktopStyles(list) {
-        // 데스크톱: 기본 스타일로 복원
-        list.style.cssText = `
-      display: flex !important;
-      overflow-x: visible !important;
-      overflow-y: visible !important;
-      gap: 6px !important;
-      padding-bottom: 0 !important;
-    `;
+    gsap.to(".en_sub", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "center top",
+        end: "+=200%",
+        scrub: true,
+      },
+      opacity: 1,
+      scale: 1.4
+    });
 
-        // 각 카드 아이템 스타일 초기화
-        const cardItems = list.querySelectorAll('.card_item');
-        cardItems.forEach(item => {
-          item.style.cssText = `
-        flex-shrink: 1 !important;
-        min-width: 320px !important;
-        width: auto !important;
-        flex: 1 !important;
-      `;
-        });
-
-        // 컨테이너 overflow 복원
-        const container = list.closest('.inner') || list.parentElement;
-        if (container) {
-          container.style.overflow = '';
-        }
-      }
-
-      addScrollbarStyle() {
-        if (!document.getElementById('mobile-scrollbar-style')) {
-          const style = document.createElement('style');
-          style.id = 'mobile-scrollbar-style';
-          style.textContent = `
-        @media (max-width: ${MOBILE_BREAKPOINT}px) {
-          /* 강력한 flex 속성 적용 */
-          .class_card_list {
-            display: flex !important;
-            flex-direction: row !important;
-            flex-wrap: nowrap !important;
-            overflow-x: auto !important;
-            overflow-y: hidden !important;
-            white-space: nowrap !important;
-            align-items: stretch !important;
-          }
-          
-          .class_card_list .card_item {
-            flex: 0 0 280px !important;
-            min-width: 280px !important;
-            width: 280px !important;
-            max-width: 280px !important;
-            display: inline-block !important;
-            vertical-align: top !important;
-            white-space: normal !important;
-            box-sizing: border-box !important;
-          }
-          
-          /* 웹킷 기반 브라우저 (Chrome, Safari, Edge) */
-          .class_card_list::-webkit-scrollbar {
-            height: 8px !important;
-            display: block !important;
-          }
-          
-          .class_card_list::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1) !important;
-            border-radius: 4px !important;
-          }
-          
-          .class_card_list::-webkit-scrollbar-thumb {
-            background: #FFE893 !important;
-            border-radius: 4px !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
-          }
-          
-          .class_card_list::-webkit-scrollbar-thumb:hover {
-            background: #FFD700 !important;
-          }
-          
-          /* Firefox */
-          .class_card_list {
-            scrollbar-width: thin !important;
-            scrollbar-color: #FFE893 rgba(255, 255, 255, 0.1) !important;
-          }
-          
-          /* 컨테이너가 카드를 자르지 않도록 */
-          #pione_class .inner,
-          .suggest_class,
-          .special_class,
-          .mixture_class,
-          .daily_class {
-            overflow: visible !important;
-            width: 100% !important;
-          }
-          
-          /* 스크롤 가능함을 시각적으로 표시 */
-          .class_card_list::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 15px;
-            width: 20px;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8));
-            pointer-events: none;
-            z-index: 1;
-          }
-          
-          /* 스크롤 영역에 상대 위치 지정 */
-          .class_card_list {
-            position: relative !important;
-          }
-        }
-        
-        /* IE/Edge 레거시 지원 */
-        @supports (-ms-overflow-style: none) {
-          @media (max-width: ${MOBILE_BREAKPOINT}px) {
-            .class_card_list {
-              -ms-overflow-style: scrollbar !important;
-            }
-          }
-        }
-      `;
-          document.head.appendChild(style);
-        }
-      }
-    }
-
-    // 통합 초기화 함수
-    function initializeControllers() {
-      let loadedImages = 0;
-      const allImages = document.querySelectorAll('img');
-
-      const startControllers = () => {
-        // ScrollImageController 시작
-        new ScrollImageController();
-
-        // MobileScrollController 시작 (이미지 로드와 무관하게 바로 실행)
-        new MobileScrollController();
-      };
-
-      const checkAllLoaded = () => {
-        loadedImages++;
-        if (loadedImages >= allImages.length) {
-          setTimeout(startControllers, 800);
-        }
-      };
-
-      if (allImages.length === 0) {
-        setTimeout(startControllers, 100);
-      } else {
-        allImages.forEach((img) => {
-          if (img.complete) {
-            checkAllLoaded();
-          } else {
-            img.addEventListener('load', checkAllLoaded);
-            img.addEventListener('error', checkAllLoaded);
-          }
-        });
-      }
-    }
-
-    // DOM 로드 완료 시 초기화
-    document.addEventListener('DOMContentLoaded', initializeControllers);
-
-    // 페이지가 이미 로드된 경우를 위한 fallback
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initializeControllers);
-    } else {
-      initializeControllers();
-    }
+    gsap.to(".tree", {
+      scrollTrigger: {
+        trigger: ".hero",
+        start: "top top",
+        end: "+=200%",
+        scrub: true,
+      },
+      scale: 2
+    });
   </script>
 
   <!-- class -->
   <script>
     // 반응형 카드 리스트 스크롤 기능
     document.addEventListener('DOMContentLoaded', function () {
-      const MOBILE_BREAKPOINT = 1000;
+      const MOBILE_BREAKPOINT = 1280;
 
       // 모든 카드 리스트 요소 선택
       const cardLists = document.querySelectorAll('.class_card_list');
@@ -2056,15 +1748,15 @@
             height: 6px;
           }
           .class_card_list::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: #FFE893;
             border-radius: 3px;
           }
           .class_card_list::-webkit-scrollbar-thumb {
-            background: #c1c1c1;
+            background: #FFE893;
             border-radius: 3px;
           }
           .class_card_list::-webkit-scrollbar-thumb:hover {
-            background: #a8a8a8;
+            background: #FFE893;
           }
         }
       `;
@@ -2092,6 +1784,94 @@
     });  
   </script>
 
+  <!-- aos_del -->
+  <script>
+    // 730px 이하에서 AOS 비활성화
+    document.addEventListener('DOMContentLoaded', function () {
+      const MOBILE_BREAKPOINT = 730;
+
+      function handleAOSForMobile() {
+        const isMobile = window.innerWidth <= MOBILE_BREAKPOINT;
+        const specialKeywordSection = document.getElementById('special_keyword');
+
+        if (!specialKeywordSection) {
+          console.log('special_keyword 섹션을 찾을 수 없습니다.');
+          return;
+        }
+
+        // 해당 섹션 내의 모든 AOS 요소 선택
+        const aosElements = specialKeywordSection.querySelectorAll('[data-aos]');
+
+        if (isMobile) {
+          // 모바일: AOS 속성 제거 및 스타일 초기화
+          aosElements.forEach(element => {
+            // AOS 속성들을 임시 저장 (복원용)
+            if (!element.hasAttribute('data-aos-original')) {
+              element.setAttribute('data-aos-original', element.getAttribute('data-aos') || '');
+              element.setAttribute('data-aos-offset-original', element.getAttribute('data-aos-offset') || '');
+              element.setAttribute('data-aos-delay-original', element.getAttribute('data-aos-delay') || '');
+            }
+
+            // AOS 속성 제거
+            element.removeAttribute('data-aos');
+            element.removeAttribute('data-aos-offset');
+            element.removeAttribute('data-aos-delay');
+
+            // AOS 관련 클래스 제거
+            element.classList.remove('aos-init', 'aos-animate');
+
+            // 스타일 초기화
+            element.style.transform = '';
+            element.style.opacity = '';
+            element.style.transition = '';
+          });
+
+          console.log('모바일 - AOS 비활성화됨');
+
+        } else {
+          // 데스크톱: AOS 속성 복원
+          aosElements.forEach(element => {
+            // 저장된 원본 속성 복원
+            const originalAos = element.getAttribute('data-aos-original');
+            const originalOffset = element.getAttribute('data-aos-offset-original');
+            const originalDelay = element.getAttribute('data-aos-delay-original');
+
+            if (originalAos) {
+              element.setAttribute('data-aos', originalAos);
+            }
+            if (originalOffset) {
+              element.setAttribute('data-aos-offset', originalOffset);
+            }
+            if (originalDelay) {
+              element.setAttribute('data-aos-delay', originalDelay);
+            }
+
+            // AOS 재초기화 (AOS 라이브러리가 로드되어 있는 경우)
+            if (typeof AOS !== 'undefined') {
+              AOS.refresh();
+            }
+          });
+
+          console.log('데스크톱 - AOS 활성화됨');
+        }
+      }
+
+      // 초기 실행
+      handleAOSForMobile();
+
+      // 윈도우 리사이즈 이벤트 리스너
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          console.log('리사이즈 감지 - 현재 너비:', window.innerWidth);
+          handleAOSForMobile();
+        }, 100);
+      });
+
+    });
+  </script>
+
   <!-- teacher -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -2103,14 +1883,14 @@
         function initOrDestroySwiper() {
           const windowWidth = window.innerWidth;
 
-          // 980px 이하에서만 Swiper 활성화
-          if (windowWidth <= 980) {
+          // 1080px 이하에서만 Swiper 활성화
+          if (windowWidth <= 1080) {
             // 기존 인스턴스가 없을 때만 새로 생성
             if (!swiperInstance) {
               swiperInstance = new Swiper('.teacher_info_con', {
                 loop: true,
                 speed: 1000,
-                spaceBetween: 12,
+                spaceBetween: 8,
                 centeredSlides: false,
 
                 autoplay: {
@@ -2121,7 +1901,7 @@
                 // 반응형 설정
                 breakpoints: {
                   0: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     spaceBetween: 10
                   },
                   381: {
@@ -2129,17 +1909,19 @@
                     spaceBetween: 12
                   },
                   681: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                     spaceBetween: 12
                   }
                 }
               });
+              console.log('Swiper 활성화됨');
             }
           } else {
-            // 980px 초과시 Swiper 제거
+            // 1080px 초과시 Swiper 제거
             if (swiperInstance) {
               swiperInstance.destroy(true, true);
               swiperInstance = null;
+              console.log('Swiper 비활성화됨');
             }
           }
         }
@@ -2152,13 +1934,13 @@
         window.addEventListener('resize', function () {
           clearTimeout(resizeTimer);
           resizeTimer = setTimeout(function () {
+            console.log('리사이즈 감지 - 현재 너비:', window.innerWidth);
             initOrDestroySwiper();
           }, 250);
         });
       }
     });
   </script>
-
 </body>
 
 </html>

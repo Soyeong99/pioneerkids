@@ -40,7 +40,7 @@
   .bg_circle { 
     transform: scale(0.8);
   }
-    .bg_yellow{
+  .bg_yellow{
     right: -40%;
   }
   .bg_pink {
@@ -58,7 +58,17 @@
 }
 @media (max-width:760px){
   .bg_circle { 
-    transform: scale(0.5);
+    transform: scale(0.6);
+  }
+  .bg_yellow{
+    right: -70%;
+  }
+  .bg_pink {
+    left: -130%; top: 50%;
+  }
+  .bg_blue {
+    left: -42%;
+    top: -20%;
   }
 }
 
@@ -67,173 +77,141 @@
   ------------- */
 
 /* hero */
-#hero {
-  height: 200vh; 
-  /* background: var(--bg-hero-ivory); width: 100%; overflow: hidden; position: relative;  */
+.hero {
+  height: 250vh;
+  background-color: var(--bg-hero-ivory);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero_content {
-  width: 100vw; height: 100vh; z-index: -1;
-  position: fixed; top: 0; left: 0; display: flex; align-items: center; justify-content: center; flex-direction: column; 
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
 }
 
-/* 텍스트들을 뷰포트 중앙에 고정 */
-.hero_txt_area {
-  transform: translate(-50%, -50%); text-align: center; z-index: 20; transition: all 0.5s ease;
-  position: absolute; top: 50%; left: 50%; 
-}
-
-.hero_title {
-  text-align: center;
-}
-
-.hero_title h2 {
-  font-size: 6rem; font-weight: 500; font-family: var(--font-design); transition: all 0.5s ease; white-space: nowrap;
-}
-
-.hero_title p {
-  font-size: 10rem; font-weight: 700; font-family: var(--font-design); transition: all 0.5s ease; white-space: nowrap;
-}
-
-.main_call_to_action {
-  text-align: center;
-}
-
-.main_call_to_action button {
-  font-size: 3.8rem; color: #fff; font-weight: 500; padding: 12px 80px 16px; cursor: pointer; background: var(--txt-black); border-radius: 100px; margin-top: 40px; transition: all 0.5s; border: none; white-space: nowrap;
-}
-
-.main_call_to_action button:hover {
-  background: var(--main-yellow); color: var(--logo-color);
-}
-
-/* 새로운 텍스트 영역도 뷰포트 중앙에 고정 */
-.new_text_area {
+.hero_center_group {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
   text-align: center;
-  z-index: 25;
-  opacity: 0;
-  transition: all 0.5s ease;
+  width: 100%;
+  max-width: 960px;
+  padding: 0 1rem;
+  z-index: 2;
 }
 
-.new_text_area h2 {
-  font-size: 6rem;
+.hero_text_group {
+  font-family: var(--font-design);
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+
+.ko_title {
+  font-size: 3.2rem; color: var(--txt-black); transition: opacity 0.5s ease;
+}
+
+.ko_sub {
+  font-size: 5rem; font-weight: 700; color: var(--txt-black); transition: opacity 0.5s ease;
+}
+
+.en_sub {
+  font-size: 8rem;
   font-weight: 700;
   color: var(--main-yellow);
-  font-family: var(--font-design);
-  margin-bottom: 20px;
-  white-space: nowrap;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 1;
 }
 
-/* 나무도 중앙 하단에 고정 */
-.center_tree {
-  width: 150px;
-  height: 150px;
-  z-index: 15;
-  transform: scale(0.5);
-  opacity: 0.8;
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.5);
-  transition: all 0.3s ease;
+.tree_wrapper {
+  margin-top: 3rem;
+  transform-origin: center center;
+  z-index: 3;
 }
 
-.center_tree img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+.tree {
+  width: 20vw;
+  max-width: 220px;
+  transition: transform 0.3s ease;
+}
+.cta_button {
+  margin-top: 2rem; pointer-events: auto; z-index: 4;
 }
 
+.cta_button button {
+  font-family: var(--font-nonmal); font-size: 2.6rem; color: #fff; font-weight: 600; padding: 5px 60px 7px ; cursor: pointer; 
+  background: var(--txt-black); border-radius: 100px; transition: all 0.5s;  white-space: nowrap;
+}
+.cta_button button:hover {
+    background: var(--main-yellow); color: var(--logo-color);
+}
 .floating_img_box {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  z-index: 5;
+  z-index: 1;
 }
-
 .floating_img {
-  width: 200px;
-  height: 200px;
   position: absolute;
-  transition: all 0.1s ease;
+  width: 150px;
+  transition: all 0.6s ease;
+  will-change: transform, opacity;
 }
 
 .floating_img img {
   width: 100%;
+  height: auto;
 }
 
-/* 좌측 이미지들 초기 위치 */
-.floating_img:nth-child(1) {
-  top: 15%;
-  left: 8%;
-}
-
-.floating_img:nth-child(2) {
-  top: 35%;
-  left: 15%;
-}
-
-.floating_img:nth-child(3) {
-  top: 55%;
-  left: 5%;
-}
-
-.floating_img:nth-child(4) {
-  top: 75%;
-  left: 12%;
-}
-
-/* 우측 이미지들 초기 위치 */
-.floating_img:nth-child(5) {
-  top: 20%;
-  right: 8%;
-}
-
-.floating_img:nth-child(6) {
-  top: 45%;
-  right: 15%;
-}
-
-.floating_img:nth-child(7) {
-  top: 70%;
-  right: 5%;
-}
+.floating_img_1 { top: 2%; left: 10%; }
+.floating_img_2 { top: 25%; left: 3%; }
+.floating_img_3 { top: 46%; left: 15%; }
+.floating_img_4 { top: 8%; right: 10%; }
+.floating_img_5 { top: 35%; right: 5%; }
+.floating_img_6 { top: 60%; right: 15%; }
+.floating_img_7 { top: 60%; left: 5%; }
 
 @media (max-width: 768px) {
-  .hero_title h2 {
-    font-size: 3rem;
+  .ko_title{
+    font-size: 2.6rem;
   }
-
-  .hero_title p {
-    font-size: 5rem;
+  .ko_sub, .en_sub {
+    font-size: 3.2rem;
   }
-
-  .main_call_to_action button {
-    font-size: 2rem;
-    padding: 8px 40px 12px;
+  .tree {
+    width: 100px;
   }
-
-  .new_text_area h2 {
-    font-size: 3rem;
-  }
-
   .floating_img {
     width: 60px;
-    height: 60px;
   }
+}
 
-  .center_tree {
-    width: 120px;
-    height: 120px;
-  }
+.next_section {
+  background: var(--bg-body-ivory);
+  padding: 5rem 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.next_section.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* edu_pr */
@@ -299,17 +277,23 @@
 }
 
 /* curriculum */
+#curriculum{
+  padding-top: 80px;
+  .sec_title{
+    padding-bottom: 30px;
+  }
+}
 .class_quick_list { 
-  display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap; 
+  display: flex; width: 100%; justify-content:flex-start; gap: 12px; flex-wrap: wrap; 
 }
 .class_quick_list > li{
   display: flex; justify-content: center; 
 }
 .icon_class > p {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 .quick_item a {
-  text-align: center; max-width: 130px; padding: 28px 0; transition: all 0.5s;
+  text-align: center; max-width: 90px; padding: 28px 0; transition: all 0.5s;
 }
 .quick_item:hover a {
   transform: scale(1.1); color: var(--logo-color);
@@ -342,7 +326,7 @@
     width: 80px ;
   }
 }
-@media (max-width:850px){
+@media (max-width:880px){
   .quick_item {
     width: calc((100% - 10px) / 5) ;
   }
@@ -440,7 +424,7 @@ section#review {
   font-size: 2.2rem; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;  
 }
 .bg_cloud {
-  width: 100%; height: 90%; background: url(../img/main/bg_review.png) no-repeat center / cover; 
+  width: 100%; height: 100%; background: url(../img/main/bg_review.png) no-repeat center / cover; 
   position: absolute; top: 0; z-index: -1;
 }
 @media(max-width:1200px){
@@ -450,12 +434,15 @@ section#review {
 }
 @media(max-width:980px){
   section#review {
-    height: 890px; padding: 200px 0 30px; 
+    height: 690px; padding: 200px 0 30px; 
   }
 }
 @media(max-width:600px){
   section#review {
     padding: 180px 0 30px; 
+  }
+  .review_img_data {
+    display: none;
   }
 }
 
@@ -601,7 +588,7 @@ section#review {
   overflow: hidden; 
 }
 .teacher_info_con ul{
-  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; display: flex; align-items: center; justify-content: center; gap: 2px;
 }
  .teacher_info_con ul li {
   position: relative; aspect-ratio: 5/7 ;
@@ -613,38 +600,24 @@ section#review {
   position: absolute; bottom: 0;
 }
 .info_txt .name {
-  font-size: 3rem; font-weight: 700; color: #fff;
+  font-size: 2.6rem; font-weight: 700; color: #fff;
 }
 .info_txt .teaching {
-  font-size: 2.2rem; color: #fff;
+  font-size: 1.8rem; color: #fff;
 }
 .go_link a {
-  font-size: 1.8rem; color: #fff; padding: 3px 12px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 50px; margin: 8px 0 3px; transition: all 0.5s;
+  font-size: 1.6rem; color: #fff; padding: 3px 12px; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border-radius: 50px; margin: 8px 0 3px; transition: all 0.5s;
 }
 .go_link:hover a {
   background: #fff; color: var(--txt-black);
 }
 
-@media (max-width:1200px) {
-  .info_txt .teaching {
-    font-size: 1.8rem;
-  }
-}
 @media (max-width:1060px) {
   .btm_info_box{
     align-items: flex-start; flex-direction: column;
   }
   .info_txt{
     padding-left: 3px; line-height: 1.2;
-  }
-  .info_txt .name{
-    font-size: 2.8rem; 
-  }
-  .info_txt .teaching {
-    font-size: 1.8rem;
-  }
-  .go_link a {
-    font-size: 1.6rem; 
   }
 }
 @media (max-width:768px) {
@@ -662,11 +635,7 @@ section#review {
   }
 }
 
-/* 클로드 ai 코드 수정 */
-/* 기존 CSS 유지하면서 Swiper 스타일 추가 */
-
-/* 980px 초과일 때 기존 CSS 그대로 사용 */
-@media (min-width: 981px) {
+@media (min-width: 1180px) {
   .teacher_info_con ul {
     display: flex; 
     align-items: center; 
@@ -684,8 +653,7 @@ section#review {
   }
 }
 
-/* 980px 이하일 때 Swiper 스타일 */
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
   .teacher_info_con {
     overflow: hidden;
   }
@@ -703,86 +671,6 @@ section#review {
     background: url(../img/common/profile_teacher_01.jpg) no-repeat center / cover;
     height: auto;
     flex-shrink: 0;
-  }
-}
-
-/* 공통 스타일 - 기존 CSS 유지 */
-.btm_info_box {
-  width: 100%; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: flex-end;  
-  padding: 15px;
-  position: absolute; 
-  bottom: 0;
-}
-
-.info_txt .name {
-  font-size: 3rem; 
-  font-weight: 700; 
-  color: #fff;
-}
-
-.info_txt .teaching {
-  font-size: 2.2rem; 
-  color: #fff;
-}
-
-.go_link a {
-  font-size: 1.8rem; 
-  color: #fff; 
-  padding: 3px 12px; 
-  background: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px); 
-  border-radius: 50px; 
-  margin: 8px 0 3px; 
-  transition: all 0.5s;
-}
-
-.go_link:hover a {
-  background: #fff; 
-  color: var(--txt-black);
-}
-
-/* 반응형 스타일 - 기존 CSS 유지 */
-@media (max-width:1200px) {
-  .info_txt .teaching {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width:1060px) {
-  .btm_info_box {
-    align-items: flex-start; 
-    flex-direction: column;
-  }
-  .info_txt {
-    padding-left: 3px; 
-    line-height: 1.2;
-  }
-  .info_txt .name {
-    font-size: 2.8rem; 
-  }
-  .info_txt .teaching {
-    font-size: 1.8rem;
-  }
-  .go_link a {
-    font-size: 1.6rem; 
-  }
-}
-
-@media (max-width:768px) {
-  .btm_info_box {
-    padding: 10px;
-  }
-  .info_txt .name {
-    font-size: 2.4rem; 
-  }
-  .info_txt .teaching {
-    font-size: 1.6rem;
-  }
-  .go_link a {
-    padding: 3px 20px;
   }
 }
 
