@@ -267,7 +267,12 @@
     font-size: 1.6rem;
   }
 }
-
+@media(max-width:540px){
+  .content_list li.active,
+  .content_list li{
+    width: 100%;
+  }
+}
 /* evtBanner */
 #evtBanner {
   padding: 50px 0;
@@ -399,7 +404,7 @@ section#review {
   margin-left: 37%;
 }
 .review_box {
-  display: flex; gap: 10px; border-radius: 10px; box-shadow: var(--box-shadow); padding: 20px; background: #fff;
+  display: flex; gap: 10px; border-radius: 10px; box-shadow: var(--box-shadow); padding: 15px; background: #fff;
 }
 .review_img_data{
   aspect-ratio: 1/1;  width: 30%;  height: 100%; border-radius: 5px;
@@ -436,16 +441,31 @@ section#review {
   section#review {
     height: 690px; padding: 200px 0 30px; 
   }
+  .nicknmae{
+    font-size: 1.6rem;
+  }
+  .review_txt_data p{
+    font-size: 1.8rem;
+  }
 }
 @media(max-width:600px){
   section#review {
     padding: 180px 0 30px; 
   }
+  .review_box{
+    padding: 12px;
+  }
   .review_img_data {
     display: none;
   }
+  .nicknmae{
+    font-size: 1.4rem;
+  }
+  .review_txt_data p{
+  font-size: 1.6rem;
 }
 
+}
 /* special_keyword */
 #special_keyword .sec_title {
   text-align: center;
@@ -580,6 +600,20 @@ section#review {
   }
 }
 
+@media (max-width: 400px) {
+  .keyword_list{
+    height: 280px;
+  }
+  .right_box .list_item::after, .left_box .list_item::after {
+    left: -55px;
+  }
+  .list_item h5{
+    font-size: 2rem;
+  }
+  .list_item h5+p{
+    font-size: 1.4rem;
+  }
+}
 /* teacher */
 #teacher{
   position: relative;
